@@ -15,7 +15,10 @@ const MiniCard = ({ time, temp, iconString }) => {
     if (iconString) {
       if (iconString.toLowerCase().includes("clear")) {
         seticons(sun);
-      } else if (iconString.toLowerCase().includes("cloud")) {
+      } else if (
+        iconString.toLowerCase().includes("cloud") ||
+        iconString.toLowerCase().includes("overcast")
+      ) {
         seticons(cloud);
       } else if (
         iconString.toLowerCase().includes("rain") ||
@@ -38,8 +41,8 @@ const MiniCard = ({ time, temp, iconString }) => {
   }, [iconString]);
 
   return (
-    <div className="glassCard w-[10rem] h-[10rem] p-4 flex flex-col ">
-      <p className="text-center ">
+    <div className="glassCard md:w-[10rem] md:h-[10rem] w-[6rem] h-[6rem] md:p-4 p-2 flex flex-col ">
+      <p className="text-center text-black font-black ">
         {
           new Date(time)
             .toLocaleTimeString("en", { weekday: "long" })
@@ -48,7 +51,11 @@ const MiniCard = ({ time, temp, iconString }) => {
       </p>
       <hr />
       <div className="w-full flex justify-center items-center flex-1   ">
-        <img src={icons} alt="weather" className="w-[4rem] h-[4rem]" />
+        <img
+          src={icons}
+          alt={iconString}
+          className="md:w-[4rem] md:h-[4rem] w-[2rem] h-[2rem]"
+        />
       </div>
       <p className="text-center font-bold ">{temp} &deg;C</p>
     </div>

@@ -42,7 +42,7 @@ const BackgraoundLayer = () => {
     <img
       src={image}
       alt="Weather_Image"
-      className="h-screen w-full fixed left-0 top-0 -z-[10]"
+      className="min-h-full w-full fixed left-0 top-0 -z-[10]"
     />
   );
 };

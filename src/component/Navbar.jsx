@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="w-full p-3 flex justify-between items-center">
       <div className="bg-[#3c79c8] p-3 rounded-[10px] border-red-950 border-solid">
-        <h1 className="font-bold text-white text-3xl">Weather App</h1>
+        <h1 className="font-bold text-white md:text-3xl">Weather App</h1>
       </div>
       <div className="bg-white w-[15rem] overflow-hidden shadow-2xl rounded-[20px] flex items-center p-2 gap-2 ">
         <img src={search} alt="search" className=" w-[1.5rem] h-[1.5rem]" />

@@ -62,8 +62,10 @@ const WeatherCard = ({
       </div>
       <div className=" font-bold text-center text-xl">{place}</div>
       <div className="w-full flex justify-between items-center mt-4 ">
-        <p className="flex-1 text-center p-2">{new Date().toDateString()}</p>
-        <p className="flex-1 text-center p-2">{time}</p>
+        <p className="flex-1 text-white text-center p-2">
+          {new Date().toDateString()}
+        </p>
+        <p className="flex-1 text-white text-center p-2">{time}</p>
       </div>
       <div className="w-full justify-between items-center mt-4 gap-4">
         <p className="flex-1 text-center p-2 font-bold bg-blue-600 shadow rounded-lg">
@@ -74,7 +76,7 @@ const WeatherCard = ({
           Humidity: {humidity}
         </p>
       </div>
-      <div className="w-full p-3 mt-4 flex justify-center items-center ">
+      <div className="w-full p-3 mt-4 flex text-black justify-center items-center ">
         <p className="font-semibold text-lg">Heat Index: </p>
         <p className="font-normal">{heatIndex ? heatIndex : "N/A"} </p>
       </div>
